@@ -4,7 +4,7 @@ Code for Advanced Computer Security GT Fall 2023
 # Flags for code
 "--file <filename/path>" -> "PCAP Filename and location"
 
-"-n <int>" -> "Number of IPs to parse" (Used once for both dests and sources)
+"-n <integer>" -> "Number of IPs to parse" (Used once for both dests and sources)
 
 "--dests" -> "Top n destination addresses"
 
