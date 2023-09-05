@@ -114,7 +114,7 @@ def listSuspicious(fileN):
         for i, pkt in enumerate(packets):
             try:
                 if pkt.transport_layer:
-                    if ((int(pkt[pkt.transport_layer].srcport) not in osi_layers.Port.values) and (int(pkt[pkt.transport_layer].srcport) not in osi_layers.Alternate.values)) and ((int(pkt[pkt.transport_layer].dstport) not in osi_layers.Port.values) and (int(pkt[pkt.transport_layer].dstport) not in osi_layers.Alternate.values)):
+                    if ((int(pkt[pkt.transport_layer].srcport) not in osi_layers.Port.values) and (int(pkt[pkt.transport_layer].srcport) not in osi_layers.Alternate.values)) or ((int(pkt[pkt.transport_layer].dstport) not in osi_layers.Port.values) and (int(pkt[pkt.transport_layer].dstport) not in osi_layers.Alternate.values)):
                         suspicious_packets.append(pkt)
             except AttributeError as ex:
                 print(ex)
